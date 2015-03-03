@@ -14,7 +14,7 @@ WORKDIR /opt/kazoo_install
 
 RUN chmod +x setup* install*
 
-VOLUME ["/var/log", "/opt/kazoo/log"]
+VOLUME ["/srv", /var/log", "/opt/kazoo/log"]
 
 CMD ./install_kazoo
 
