@@ -25,7 +25,7 @@ RUN chown bigcouch:daemon /srv -R
 RUN chmod a+rw /var/log
 RUN chmod a+rw /opt/kazoo/log
 
-VOLUME ["/srv", /var/log", "/opt/kazoo/log"]
+VOLUME ["/srv", "/etc/kazoo", "/var/log", "/opt/kazoo/log"]
 
 CMD ./install_kazoo
 
