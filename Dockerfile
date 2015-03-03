@@ -1,14 +1,10 @@
 FROM centos:6
 MAINTAINER Bing Li <enst.bupt@gmail.com>
 
-RUN groupadd -r bigcouch
-  && useradd -r -g daemon bigcouch
-RUN groupadd -r freeswitch
-  && useradd -r -g daemon freeswitch
-RUN groupadd -r kazoo
-  && useradd -r -g daemon kazoo
-RUN groupadd -r kamailio
-  && useradd -r -g daemon kamailio
+RUN useradd -r -g daemon bigcouch
+RUN useradd -r -g daemon freeswitch
+RUN useradd -r -g daemon kazoo
+RUN useradd -r -g daemon kamailio
 
 RUN curl -o /etc/yum.repos.d/2600hz.repo http://repo.2600hz.com/2600hz.repo
 
