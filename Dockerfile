@@ -11,6 +11,8 @@ RUN git clone https://github.com/2600hz/community-scripts.git
 RUN cp -r community-scripts/simple-installer /opt/kazoo_install
 RUN rm -rf commumity-scripts
 
+ADD number_manager.py /root/
+
 #iptables may cause exit
 RUN sed -i '/iptables/s/^/#/' /opt/kazoo_install/setup_packages
 
